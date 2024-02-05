@@ -1,6 +1,6 @@
 FROM golang:1.21-bullseye
 
-RUN apt-get update && apt-get install -y --no-install-recommends gcc-aarch64-linux-gnu libc6-dev-arm64-cross && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends gcc-aarch64-linux-gnu libc6-dev-arm64-cross libvips libvips-dev && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ENV NODE_VERSION=20.10.0
 RUN apt install -y curl
